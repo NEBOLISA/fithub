@@ -7,20 +7,26 @@ const Navbar = () => {
       direction="row"
       justifyContent="space-around"
       sx={{
-        gap: { sm: "122px", xs: "40px" },
+        gap: { sm: "122px", xs: "20px" },
         mt: { sm: "32px", xs: "20px" },
-        justifyContent: "none",
+        justifyContent: { xs: "space-around", lg: "none" },
       }}
       px="20px"
     >
       <Link to="/">
-        <img
-          src={Logo}
-          alt="logo"
-          style={{ width: "78px", height: "78px", margin: "0 20px" }}
-        />
+        <img src={Logo} alt="logo" className="header_logo" />
       </Link>
-      <Stack direction="row" gap="40px" fontSize="24px" alignItems="flex-end">
+      <Stack
+        sx={{
+          fontSize: { xs: "18px" },
+          alignItems: { xs: "center" },
+          justifyContent: { xs: "center" },
+        }}
+        direction="row"
+        gap="40px"
+        fontSize="24px"
+        alignItems="flex-end"
+      >
         <Link
           to="/"
           style={{

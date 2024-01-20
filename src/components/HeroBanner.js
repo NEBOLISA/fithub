@@ -4,6 +4,8 @@ import HeroBannerImage2 from "../assets/images/HeroBannerImage2.png";
 const HeroBanner = () => {
   return (
     <Box
+      display="flex"
+      flexDirection="column"
       className="hero_box"
       sx={{ mt: { lg: "212px", xs: "70px" }, ml: { sm: "50px" } }}
       position="relative"
@@ -14,7 +16,9 @@ const HeroBanner = () => {
       </Typography>
       <Typography
         fontWeight={700}
-        sx={{ fontSize: { lg: "44px", xs: "40px" } }}
+        sx={{
+          fontSize: { lg: "44px", xs: "40px" },
+        }}
         mb="23px"
         mt="30px"
       >
@@ -25,7 +29,11 @@ const HeroBanner = () => {
         Check out the most effective exercises
       </Typography>
       <Button
-        sx={{ backgroundColor: "#ff2625", padding: "10px" }}
+        sx={{
+          backgroundColor: "#ff2625",
+          padding: "10px",
+          alignSelf: { xs: "center" },
+        }}
         variant="contained"
         color="error"
         href="#exercises"

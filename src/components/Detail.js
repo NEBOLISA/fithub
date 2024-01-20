@@ -30,10 +30,13 @@ const Detail = ({ exerciseDetail }) => {
     >
       <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
       <Stack sx={{ gap: { lg: "35px", sx: "20px" } }}>
-        <Typography variant="h3">
+        <Typography
+          sx={{ fontSize: { xs: "2rem" }, textAlign: { xs: "center" } }}
+          variant="h3"
+        >
           <p style={{ textTransform: "capitalize" }}>{name}</p>
         </Typography>
-        <Typography variant="h6">
+        <Typography sx={{ textAlign: { xs: "center" } }} variant="h6">
           Exercise keep you strong.{" "}
           <p style={{ display: "inline", textTransform: "capitalize" }}>
             <b>{name}</b>
@@ -48,15 +51,12 @@ const Detail = ({ exerciseDetail }) => {
               sx={{
                 background: "#fff2db",
                 borderRadius: "50%",
-                width: "100px",
-                height: "100px",
+                width: { xs: "70px", lg: "100px" },
+                height: { xs: "70px", lg: "100px" },
+                mt: { xs: "10px" },
               }}
             >
-              <img
-                src={item.icon}
-                alt={item.name}
-                style={{ width: "50px", height: "50px" }}
-              />
+              <img src={item.icon} alt={item.name} className="detail_icon" />
             </Button>
             <Typography textTransform="capitalize" variant="h6">
               {item.name}

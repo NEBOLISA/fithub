@@ -69,9 +69,14 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
             textTransform: "none",
             width: { lg: "175px", xs: "80px" },
             fontSize: { lg: "20px", xs: "14px" },
-            height: "56px",
+            height: { xs: "46px", lg: "56px" },
             position: "absolute",
             right: 0,
+            mt: { xs: "10px" },
+            left: { xs: "50%" },
+            transform: { xs: "translateX(-50%)" },
+            display: { xs: "flex" },
+            alignSelf: { xs: "center" },
           }}
           onClick={handleSearch}
         >
@@ -87,12 +92,18 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
 
           p: "20px",
           pl: "0",
-          ml: "-32px",
-
+          // ml: "-32px",
+          ml: { xs: "0", lg: "-32px" },
           pr: "0",
         }}
       >
-        <Typography mb="46px" variant="h3" alignSelf="start" ml="20px">
+        <Typography
+          sx={{ fontSize: { xs: "1.8rem" }, textAlign: { xs: "center" } }}
+          mb="46px"
+          variant="h3"
+          alignSelf="start"
+          ml="20px"
+        >
           Exercise Category
         </Typography>
         {bodyParts.length ? (

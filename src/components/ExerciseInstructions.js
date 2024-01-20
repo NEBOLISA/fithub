@@ -3,7 +3,11 @@ import { Box, Stack, Typography } from "@mui/material";
 const ExerciseInstructions = ({ exerciseDetail }) => {
   return (
     <Stack p="20px" mt="40px">
-      <Typography mb="10px" variant="h3">
+      <Typography
+        sx={{ fontSize: { xs: "2rem" }, textAlign: { xs: "center" } }}
+        mb="10px"
+        variant="h3"
+      >
         Instructions
       </Typography>
       {exerciseDetail?.instructions?.map((item, index) => (
